@@ -3,15 +3,15 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#define default_layer 0
-#define second_layer  1
-#define third_layer   2
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/mouse.h>
 
+#define DEFEULT 0
+#define SECOND  1
+#define THIRD   2
+
+#include <dt-bindings/zmk/outputs.h>
 
 &mt {
     tapping-term-ms = <200>;
@@ -223,7 +223,7 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 // |=================| LWR | SPC |   | ENT | RSE  |=================|
 // ------------------------------------------------------------------
-       		second_layer {
+       		second {
 		bindings = <
 		&kp C   &kp L       &kp M       &kp F                   &kp U               &kp Z               &kp Z       &kp Z       &kp Z       &kp Z 
 		&kp I   &mt LCTL S  &mt LALT R	&mt LGUI T              &kp LC(LG(Q))       &kp LC(LG(SPACE))   &mt RGUI N  &mt RALT K  &mt RCTL A  &kp O
@@ -239,7 +239,7 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 // |=================| LWR | SPC |   | ENT | RSE  |=================|
 // ------------------------------------------------------------------
-		third_layer {
+		third {
 		bindings = <
 		&kp C   &kp L       &kp M       &kp F                   &kp U               &kp Z               &kp Z       &kp Z       &kp Z       &kp Z 
 		&kp I   &mt LCTL S  &mt LALT R	&mt LGUI T              &kp LC(LG(Q))       &kp LC(LG(SPACE))   &mt RGUI N  &mt RALT K  &mt RCTL A  &kp O
