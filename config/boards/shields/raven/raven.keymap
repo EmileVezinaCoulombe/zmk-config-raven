@@ -41,7 +41,7 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 // |=================| LWR | SPC |   | ENT | RSE  |=================|
 // ------------------------------------------------------------------
-        default {
+        DEFAULT_layer {
             bindings = <
             &kp Q       &kp W       &kp E           &kp R       &kp T       &kp Y       &kp U   &kp I           &kp O       &kp P     
             &mt LCTL A  &mt LALT S  &mt LSHIFT D	&kp F       &kp G       &kp H       &kp J   &mt RSHIFT K    &mt RALT L  &mt RCTL SEMICOLON
@@ -57,7 +57,7 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 // |=================| LWR | SPC |   | ENT | RSE  |=================|
 // ------------------------------------------------------------------
-       	second {
+       	SECOND_layer {
             bindings = <
             &kp Q       &kp W       &kp E           &kp R       &kp T       &kp Y       &kp U   &kp I           &kp O       &kp P     
             &mt LCTL A  &mt LALT S  &mt LSHIFT D	&kp F       &kp G       &kp H       &kp J   &mt RSHIFT K    &mt RALT L  &mt RCTL SEMICOLON
@@ -73,7 +73,7 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 // |=================| LWR | SPC |   | ENT | RSE  |=================|
 // ------------------------------------------------------------------
-		third {
+		THIRD_layer {
             bindings = <
             &kp Q       &kp W       &kp E           &kp R       &kp T       &kp Y       &kp U   &kp I           &kp O       &kp P     
             &mt LCTL A  &mt LALT S  &mt LSHIFT D	&kp F       &kp G       &kp H       &kp J   &mt RSHIFT K    &mt RALT L  &mt RCTL SEMICOLON
