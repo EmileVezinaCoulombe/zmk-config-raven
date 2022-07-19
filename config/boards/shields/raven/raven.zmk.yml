@@ -1,6 +1,6 @@
 file_format: "1"
 id: raven
-name: The Raven 
+name: Flying Raven 
 type: shield
 url: https://github.com/EmileVezinaCoulombe/zmk-config-raven
 requires: [pro_micro]
