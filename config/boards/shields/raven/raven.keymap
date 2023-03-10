@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DFT 0
+#define SYS 1
 
 
 #define SK(KEY) &nk KEY KEY
@@ -23,7 +24,6 @@
 };
 
 / { 
-
 
     combos {
         #include "combos.dtsi"
@@ -75,8 +75,21 @@
             &mt LCTL A  &mt LALT S  &mt LSHIFT D	&kp F       &kp G       &kp H       &kp J        &mt RSHIFT K    &mt RALT L  &mt RCTL SEMICOLON  
             &kp Z       &kp X       &kp C           &kp V 		&kp B       &kp N       &kp M        &kp COMMA       &kp PERIOD  &kp SLASH           
 //         ╰──────────────────────────────────────╮                                                   ╭────────────────────────────────────────────╯
-                                                    &kp LGUI    &kp SPC     &kp ESCAPE  &kp BACKSPACE
+                                                    &mo 1    &kp SPC        &kp ESCAPE  &kp BACKSPACE
 //                                                ╰─────────────────────╯  ╰──────────────────────────╯
+            >;
+		};
+
+        SYS_layer {
+            label = "SYS";
+            bindings = <
+//         ╭────────────────────────────────────────────────────────────╮      ╭───────────────────────────────────────────────────────────────────────╮
+            &kp Q       &kp W       &kp E           &kp R       &kp T           &kp Y       &kp U        &kp I           &kp O       &kp P     
+            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4   &kp H       &kp J        &mt RSHIFT K    &mt RALT L  &mt RCTL SEMICOLON  
+            &kp Z       &kp X       &kp C           &kp V 		&kp B           &kp N       &kp M        &kp COMMA       &kp PERIOD  &kp SLASH           
+//         ╰──────────────────────────────────────╮                                                        ╭────────────────────────────────────────────╯
+                                                    &mo 0    &kp SPC            &kp ESCAPE  &kp BACKSPACE
+//                                                ╰─────────────────────╯       ╰──────────────────────────╯
             >;
 		};
 	};
