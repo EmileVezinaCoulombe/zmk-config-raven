@@ -10,7 +10,6 @@
 
 #define DFT 0
 #define SYM 1
-#define SYS 2
 
 
 #define SK(KEY) &nk KEY KEY
