@@ -12,6 +12,20 @@
 #define SYM 1
 #define SYS 2
 
+#define COMBO_GLOBAL(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    bindings = <BINDINGS>; \
+    timeout-ms = <15>; \
+    key-positions = <KEYPOS>; \
+  };
+
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+  combo_##NAME { \
+    bindings = <BINDINGS>; \
+    timeout-ms = <50>; \
+    key-positions = <KEYPOS>; \
+    layers = <LAYERS>; \
+  };
 
 #define SK(KEY) &nk KEY KEY
 #define STICKY_KEY_TIMEOUT 60000 // Keep sticky keys active longer
@@ -24,10 +38,42 @@
   continue-list = <UNDERSCORE MINUS BACKSPACE>;
 };
 
+//                         Layout
+//  ╭────────────────────────╮╭────────────────────────╮
+//  │ 0  | 1  | 2  | 3  | 4  ││ 21 | 20 | 19 | 18 | 17 │
+//  │ 5  | 6  | 7  | 8  | 9  ││ 26 | 25 | 24 | 23 | 22 │
+//  │ 10 | 11 | 12 | 13 | 14 ││ 31 | 30 | 29 | 28 | 27 │
+//  ╰──────────────╮ 15 | 16 ││ 33 | 32 ╭──────────────╯
+//                 ╰─────────╯╰─────────╯
+
 / { 
 
     combos {
-        #include "combos.dtsi"
+        compatible = "zmk,combos";
+        /* NAVIGATION */
+        COMBO(layer_dft, &to DFT, 16 33, 1 2)
+        COMBO(layer_sym, &to SYM, 15 33, 0 2)
+        COMBO(layer_sys, &to SYS, 15 32, 0 2)
+
+        COMBO_GLOBAL(left, &kp LEFT, 8 26)
+        COMBO_GLOBAL(down, &kp DOWN, 8 25)
+        COMBO_GLOBAL(up, &kp UP, 8 24)
+        COMBO_GLOBAL(right, &kp RIGHT, 8 23)
+
+        COMBO_GLOBAL(zero, &kp N0, 9 26)
+        COMBO_GLOBAL(one, &kp N1, 9 20)
+        COMBO_GLOBAL(two, &kp N2, 9 19)
+        COMBO_GLOBAL(three, &kp N3, 9 18)
+        COMBO_GLOBAL(four, &kp N4, 9 25)
+        COMBO_GLOBAL(five, &kp N5, 9 24)
+        COMBO_GLOBAL(six, &kp N6, 9 23)
+        COMBO_GLOBAL(seven, &kp N7, 9 20)
+        COMBO_GLOBAL(eight, &kp N8, 9 20)
+        COMBO_GLOBAL(nine, &kp N9, 9 20)
+
+        /* SYS */
+        COMBO_GLOBAL(reset, &reset, 0 1 18 17)
+        COMBO_GLOBAL(bt_reset, &bt bt_CLR, 0 1 2 3)
     };
 
     macros {

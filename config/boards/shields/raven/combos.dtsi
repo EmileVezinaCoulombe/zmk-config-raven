@@ -28,31 +28,6 @@ compatible = "zmk,combos";
 #define ALPHA_WIN ARAQ HDNW
 #define ALPHA_NO_QWERTY HDN HDNW
 
-/* NAVIGATION */
-COMBO(layer_dft, &to DFT, 16 33, 1 2)
-COMBO(layer_sym, &to SYM, 15 33, 0 2)
-COMBO(layer_sys, &to SYS, 15 32, 0 2)
-
-COMBO_GLOBAL(left, &kp LEFT, 8 26)
-COMBO_GLOBAL(down, &kp DOWN, 8 25)
-COMBO_GLOBAL(up, &kp UP, 8 24)
-COMBO_GLOBAL(right, &kp RIGHT, 8 23)
-
-COMBO_GLOBAL(zero, &kp N0, 9 26)
-COMBO_GLOBAL(one, &kp N1, 9 20)
-COMBO_GLOBAL(two, &kp N2, 9 19)
-COMBO_GLOBAL(three, &kp N3, 9 18)
-COMBO_GLOBAL(four, &kp N4, 9 25)
-COMBO_GLOBAL(five, &kp N5, 9 24)
-COMBO_GLOBAL(six, &kp N6, 9 23)
-COMBO_GLOBAL(seven, &kp N7, 9 20)
-COMBO_GLOBAL(eight, &kp N8, 9 20)
-COMBO_GLOBAL(nine, &kp N9, 9 20)
-
-/* SYS */
-COMBO_GLOBAL(reset, &reset, 0 1 18 17)
-COMBO_GLOBAL(bt_reset, &bt bt_CLR, 0 1 2 3)
-
 /* Text */
 /* COMBO(caps_word, &caps_word, 31 32, ALPHA_ALL) */
 /* COMBO(key_repeat_l, &key_repeat, 23 24, ALPHA_ALL) */
