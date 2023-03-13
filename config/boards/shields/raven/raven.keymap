@@ -76,16 +76,16 @@
         num_layer {
             label = "SYM";
             bindings = <
-//         ╭───────────────────────────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────────────────────────────╮
-            &kp AT_SIGN      &kp PIPE       &kp PERCENT     &kp ASTERISK  &kp TILDE        &kp GRAVE          &kp LBRC      &kp RBRC   &kp LESS_THAN  &kp GREATER_THAN
-            &kp EXCLAMATION  &kp SLASH      &kp EQUAL       &kp PLUS      &kp AMPERSAND    &kp DOUBLE_QUOTES  &kp LPAR      &kp RPAR   &kp SEMICOLON  &kp COlON
-            &kp QUESTION     &kp BACKSLASH  &kp UNDERSCORE  &kp MINUS     &kp HASH         &kp SINGLE_QUOTE   &kp LBKT      &kp RBKT   &kp CARET      &kp DOLLAR
-//         ╰──────────────────────────────────────────────╮                            │ │                                  ╭───────────────────────────────────────────╯
-                                                            &kp ESCAPE     &kp LGUI        &kp SPC            &kp BACKSPACE
-//                                                        ╰────────────────────────────╯ ╰──────────────────────────────────╯
+            &kp AT_SIGN      &kp PIPE       &kp PERCENT     &kp ASTERISK  &kp TILDE        &kp GRAVE          &kp LBRC      &kp RBRC   &kp LESS_THAN  &kp GREATER_THAN 
+            &kp EXCLAMATION  &kp SLASH      &kp EQUAL       &kp PLUS      &kp AMPERSAND    &kp DOUBLE_QUOTES  &kp LPAR      &kp RPAR   &kp SEMICOLON  &kp COlON 
+            &kp QUESTION     &kp BACKSLASH  &kp UNDERSCORE  &kp MINUS     &kp HASH         &kp SINGLE_QUOTE   &kp LBKT      &kp RBKT   &kp CARET      &kp DOLLAR 
+                                                            &kp ESCAPE    &kp LGUI         &kp SPC            &kp BACKSPACE
             >;
 		};
-
+    
+//         ╭───────────────────────────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────────────────────────────╮
+//         ╰──────────────────────────────────────────────╮                            │ │                                  ╭───────────────────────────────────────────╯
+//                                                        ╰────────────────────────────╯ ╰──────────────────────────────────╯
         sys_layer {
             label = "SYS";
             bindings = <
