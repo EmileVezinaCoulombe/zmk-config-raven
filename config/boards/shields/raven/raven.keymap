@@ -73,7 +73,7 @@
 
         /* SYS */
         COMBO_GLOBAL(reset, &reset, 0 1 18 17)
-        COMBO_GLOBAL(bt_reset, &bt bt_CLR, 0 1 2 3)
+        COMBO_GLOBAL(bt_reset, &bt BT_CLR, 0 1 2 3)
     };
 
     macros {
