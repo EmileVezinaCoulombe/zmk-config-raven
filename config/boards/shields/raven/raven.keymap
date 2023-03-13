@@ -65,7 +65,7 @@
             bindings = <
 //         ╭────────────────────────────────────────────────────────────╮ ╭────────────────────────────────────────────────────────────────╮
             &kp Q       &kp W       &kp E          &kp R       &kp T        &kp Y    &kp U         &kp I         &kp O       &kp P     
-            &mt LCTL A  &mt LALT S  &mt LSHIFT D   &kp F       &kp G        &kp H    &kp J         &mt RSHIFT K  &mt RALT L  &mt RCTL GUI
+            &mt LALT A  &mt LCTL S  &mt LSHIFT D   &kp F       &kp G        &kp H    &kp J         &mt RSHIFT K  &mt RCTL L  &mt RALT GUI
             &kp Z       &kp X       &kp C          &kp V       &kp B        &kp N    &kp M         &kp COMMA     &kp PERIOD  &kp TAB        
 //         ╰─────────────────────────────────────╮                      │ │                        ╭───────────────────────────────────────╯
                                                    &kp ESCAPE  &kp LGUI     &kp SPC  &kp BACKSPACE
@@ -83,7 +83,6 @@
 //         ╰──────────────────────────────────────────────╮                            │ │                                  ╭───────────────────────────────────────────╯
                                                             &kp ESCAPE     &kp LGUI        &kp SPC            &kp BACKSPACE
 //                                                        ╰────────────────────────────╯ ╰──────────────────────────────────╯
-
             >;
 		};
 
