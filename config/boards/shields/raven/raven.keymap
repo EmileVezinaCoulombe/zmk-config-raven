@@ -64,7 +64,7 @@
             label = "DFT";
             bindings = <
 //         ╭────────────────────────────────────────────────────────────╮ ╭────────────────────────────────────────────────────────────────╮
-            &lt DFT Q   &lt SYM W   &lt SYS E      &kp R       &kp T        &kp Y    &kp U         &lt SYS I         &lt SYM O       &lt DFT P     
+            &lt DFT Q   &lt SYM W   &lt SYS E      &kp R       &kp T        &kp Y    &kp U         &lt SYS I     &lt SYM O   &lt DFT P     
             &mt LALT A  &mt LCTL S  &mt LSHIFT D   &kp F       &kp G        &kp H    &kp J         &mt RSHIFT K  &mt RCTL L  &mt RALT GUI
             &kp Z       &kp X       &kp C          &kp V       &kp B        &kp N    &kp M         &kp COMMA     &kp PERIOD  &kp TAB        
 //         ╰─────────────────────────────────────╮                      │ │                        ╭───────────────────────────────────────╯
@@ -76,14 +76,14 @@
         num_layer {
             label = "SYM";
             bindings = <
-//         ╭───────────────────────────────────────────────────────────────────────────╮ ╭─────────────────────────────────────────────────────────────────────────────────────╮
-            &lt DFT AT_SIGN  &lt SYM PIPE   &lt SYS PERCENT &kp ASTERISK  &kp TILDE        &kp GRAVE          &kp LBRC      &lt SYS RBRC &lt SYM LESS_THAN &lt DFT GREATER_THAN 
-            &kp EXCLAMATION  &kp SLASH      &kp EQUAL       &kp PLUS      &kp AMPERSAND    &kp DOUBLE_QUOTES  &kp LPAR      &kp RPAR     &kp SEMICOLON     &kp COLON 
-            &kp QUESTION     &kp BACKSLASH  &kp UNDERSCORE  &kp MINUS     &kp HASH         &kp SINGLE_QUOTE   &kp LBKT      &kp RBKT     &kp CARET         &kp DOLLAR 
+//         ╭───────────────────────────────────────────────────────────────────────────────────╮ ╭────────────────────────────────────────────────────────────────────────────────────────────╮
+            &lt DFT AT_SIGN       &lt SYM PIPE    &lt SYS PERCENT   &kp ASTERISK  &kp TILDE        &kp GRAVE          &kp LBRC      &lt SYS RBRC     &lt SYM LESS_THAN   &lt DFT GREATER_THAN 
+            &mt LALT EXCLAMATION  &mt LCTL SLASH  &mt LSHIFT EQUAL  &kp PLUS      &kp AMPERSAND    &kp DOUBLE_QUOTES  &kp LPAR      &mt RSHIFT RPAR  &mt RCTL SEMICOLON  &mt RALT COLON 
+            &kp QUESTION          &kp BACKSLASH   &kp UNDERSCORE    &kp MINUS     &kp HASH         &kp SINGLE_QUOTE   &kp LBKT      &kp RBKT         &kp CARET           &kp DOLLAR 
 
-//         ╰──────────────────────────────────────────────╮                            │ │                                  ╭──────────────────────────────────────────────────╯
-                                                            &kp ESCAPE    &kp LGUI         &kp SPC            &kp BACKSPACE
-//                                                        ╰────────────────────────────╯ ╰──────────────────────────────────╯
+//         ╰──────────────────────────────────────────────────────╮                            │ │                                  ╭─────────────────────────────────────────────────────────╯
+                                                                    &kp ESCAPE    &kp LGUI         &kp SPC            &kp BACKSPACE
+//                                                                ╰────────────────────────────╯ ╰──────────────────────────────────╯
             >;
 		};
 
