@@ -49,6 +49,9 @@ COMBO_GLOBAL(seven, &kp N7, 9 20)
 COMBO_GLOBAL(eight, &kp N8, 9 20)
 COMBO_GLOBAL(nine, &kp N9, 9 20)
 
+/* SYS */
+COMBO_GLOBAL(reset, &reset, 0 17)
+
 /* Text */
 /* COMBO(caps_word, &caps_word, 31 32, ALPHA_ALL) */
 /* COMBO(key_repeat_l, &key_repeat, 23 24, ALPHA_ALL) */
