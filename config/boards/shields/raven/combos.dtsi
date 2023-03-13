@@ -29,6 +29,10 @@ compatible = "zmk,combos";
 #define ALPHA_NO_QWERTY HDN HDNW
 
 /* NAVIGATION */
+COMBO(layer_dft, &to DFT, 16 33, 1 2)
+COMBO(layer_sym, &to SYM, 15 33, 0 2)
+COMBO(layer_sys, &to SYS, 15 32, 0 2)
+
 COMBO_GLOBAL(left, &kp LEFT, 8 26)
 COMBO_GLOBAL(down, &kp DOWN, 8 25)
 COMBO_GLOBAL(up, &kp UP, 8 24)
