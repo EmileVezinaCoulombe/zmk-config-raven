@@ -100,8 +100,8 @@
             label = "NUM";
             bindings = <
 //         ╭────────────────────────────────────────────────╮ ╭────────────────────────────────────────────────────────────────╮
-            &lt DFT  &lt SYM  &lt SYS  &none    &none           &kp PAGE_UP     &kp N1         &lt SYS N2  &lt SYM N3  &lt DFT
-            &none    &none    &none    &lt LAY  &lt NUM         &lt NUM N0      &lt LAY N4     &kp N5      &kp N6      &none 
+            &mo DFT  &mo SYM  &mo SYS  &none    &none           &kp PAGE_UP     &kp N1         &lt SYS N2  &lt SYM N3  &lt DFT
+            &none    &none    &none    &mo LAY  &mo NUM         &lt NUM N0      &lt LAY N4     &kp N5      &kp N6      &none 
             &none    &none    &none    &none    &none           &kp PAGE_DOWN   &kp N7         &kp N8      &kp N9      &none           
 //         ╰─────────────────────────╮                      │ │                               ╭────────────────────────────────╯
                                        &kp ESCAPE  &kp LGUI     &kp SPC         &kp BACKSPACE
