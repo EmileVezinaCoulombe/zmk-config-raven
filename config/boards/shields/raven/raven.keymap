@@ -74,8 +74,8 @@
             bindings = <
 //         ╭────────────────────────────────────────────────────────────╮ ╭────────────────────────────────────────────────────────────────╮
             &lt DFT Q   &lt SYM W   &lt SYS E      &kp R       &kp T        &kp Y      &kp U        &lt SYS I     &lt SYM O   &lt DFT P     
-            &mt LALT A  &mt LCTL S  &mt LSHIFT D   &lt LAY F   &lt NUM G    &lt NUM H  &lt LAY J    &mt RSHIFT K  &mt RCTL L  &mt RALT TAB
-            &kp Z       &kp X       &kp C          &kp V       &kp B        &kp N      &kp M        &kp COMMA     &kp PERIOD  &none        
+            &mt LALT A  &mt LCTL S  &mt LSHIFT D   &lt LAY F   &lt NUM G    &lt NUM H  &lt LAY J    &mt RSHIFT K  &mt RCTL L  &mt RALT ENTER
+            &kp Z       &kp X       &kp C          &kp V       &kp B        &kp N      &kp M        &kp COMMA     &kp PERIOD  &kp TAB        
 //         ╰─────────────────────────────────────╮                      │ │                        ╭───────────────────────────────────────╯
                                                    &kp ESCAPE  &kp LGUI     &kp SPC  &kp BACKSPACE
 //                                               ╰──────────────────────╯ ╰────────────────────────╯
