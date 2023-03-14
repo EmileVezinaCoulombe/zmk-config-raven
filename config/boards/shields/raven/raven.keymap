@@ -123,11 +123,11 @@
         layout_layer {
             label = "LAY";
             bindings = <
-//         ╭──────────────────────────────────────────╮ ╭────────────────────────────────────────────╮
-            &none &none &none    &none       &none        &none    &none         &none  &none  &none
-            &none &none &to SYM  &to DFT     &to NUM      &to NUM  &to DFT       &SYM   &none  &none 
-            &none &none &none    &none       &none        &none    &none         &none  &none  &none           
-//         ╰───────────────────╮                      │ │                        ╭───────────────────╯
+//         ╭──────────────────────────────────────────╮ ╭──────────────────────────────────────────────╮
+            &none &none &none    &none       &none        &none    &none         &none    &none  &none
+            &none &none &to SYM  &to DFT     &to NUM      &to NUM  &to DFT       &to SYM  &none  &none 
+            &none &none &none    &none       &none        &none    &none         &none    &none  &none           
+//         ╰───────────────────╮                      │ │                        ╭─────────────────────╯
                                  &kp ESCAPE  &kp LGUI     &kp SPC  &kp BACKSPACE
 //                             ╰──────────────────────╯ ╰────────────────────────╯
             >;
