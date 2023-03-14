@@ -10,22 +10,9 @@
 
 #define DFT 0
 #define SYM 1
-#define SYS 2
-
-#define COMBO_GLOBAL(NAME, BINDINGS, KEYPOS) \
-  combo_##NAME { \
-    bindings = <BINDINGS>; \
-    timeout-ms = <15>; \
-    key-positions = <KEYPOS>; \
-  };
-
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
-  combo_##NAME { \
-    bindings = <BINDINGS>; \
-    timeout-ms = <50>; \
-    key-positions = <KEYPOS>; \
-    layers = <LAYERS>; \
-  };
+#define NUM 2
+#define SYS 3
+#define LAY 4
 
 #define SK(KEY) &nk KEY KEY
 #define STICKY_KEY_TIMEOUT 60000 // Keep sticky keys active longer
@@ -49,37 +36,7 @@
 / { 
 
     combos {
-        compatible = "zmk,combos";
-        /* NAVIGATION */
-        /* COMBO(layer_dft, &to DFT, 16 33, 1 2); */
-        /* COMBO(layer_sym, &to SYM, 15 33, 0 2); */
-        /* COMBO(layer_sys, &to SYS, 15 32, 0 2); */
-
-        /* COMBO_GLOBAL(left, &kp LEFT, 8 26); */
-        /* COMBO_GLOBAL(down, &kp DOWN, 8 25); */
-        /* COMBO_GLOBAL(up, &kp UP, 8 24); */
-        /* COMBO_GLOBAL(right, &kp RIGHT, 8 23); */
-
-        combo_zero {
-            bindings = <&kp N0>;
-            timeout-ms = <50>;
-            key-positions = <9 26>;
-        };
-
-        /* COMBO_GLOBAL(zero, &kp N0, 9 26); */
-        /* COMBO_GLOBAL(one, &kp N1, 9 20); */
-        /* COMBO_GLOBAL(two, &kp N2, 9 19); */
-        /* COMBO_GLOBAL(three, &kp N3, 9 18); */
-        /* COMBO_GLOBAL(four, &kp N4, 9 25); */
-        /* COMBO_GLOBAL(five, &kp N5, 9 24); */
-        /* COMBO_GLOBAL(six, &kp N6, 9 23); */
-        /* COMBO_GLOBAL(seven, &kp N7, 9 20); */
-        /* COMBO_GLOBAL(eight, &kp N8, 9 20); */
-        /* COMBO_GLOBAL(nine, &kp N9, 9 20); */
-
-        /* SYS */
-        /* COMBO_GLOBAL(reset, &reset, 0 1 18 17); */
-        /* COMBO_GLOBAL(bt_reset, &bt BT_CLR, 0 1 2 3); */
+        #include "combos.dtsi"
     };
 
     macros {
@@ -116,39 +73,63 @@
             label = "DFT";
             bindings = <
 //         ╭────────────────────────────────────────────────────────────╮ ╭────────────────────────────────────────────────────────────────╮
-            &lt DFT Q   &lt SYM W   &lt SYS E      &kp R       &kp T        &kp Y    &kp U         &lt SYS I     &lt SYM O   &lt DFT P     
-            &mt LALT A  &mt LCTL S  &mt LSHIFT D   &kp F       &kp G        &kp H    &kp J         &mt RSHIFT K  &mt RCTL L  &mt RALT GUI
-            &kp Z       &kp X       &kp C          &kp V       &kp B        &kp N    &kp M         &kp COMMA     &kp PERIOD  &kp TAB        
+            &lt DFT Q   &lt SYM W   &lt SYS E      &kp R       &kp T        &kp Y      &kp U        &lt SYS I     &lt SYM O   &lt DFT P     
+            &mt LALT A  &mt LCTL S  &mt LSHIFT D   &lt LAY F   &lt NUM G    &lt NUM H  &lt LAY J    &mt RSHIFT K  &mt RCTL L  &mt RALT TAB
+            &kp Z       &kp X       &kp C          &kp V       &kp B        &kp N      &kp M        &kp COMMA     &kp PERIOD  &none        
 //         ╰─────────────────────────────────────╮                      │ │                        ╭───────────────────────────────────────╯
                                                    &kp ESCAPE  &kp LGUI     &kp SPC  &kp BACKSPACE
 //                                               ╰──────────────────────╯ ╰────────────────────────╯
             >;
 		};
 
-        num_layer {
+        sym_layer {
             label = "SYM";
             bindings = <
-//         ╭───────────────────────────────────────────────────────────────────────────────────╮ ╭────────────────────────────────────────────────────────────────────────────────────────────╮
-            &lt DFT AT_SIGN       &lt SYM PIPE    &lt SYS PERCENT   &kp ASTERISK  &kp TILDE        &kp GRAVE          &kp LBRC      &lt SYS RBRC     &lt SYM LESS_THAN   &lt DFT GREATER_THAN 
-            &mt LALT EXCLAMATION  &mt LCTL SLASH  &mt LSHIFT EQUAL  &kp PLUS      &kp AMPERSAND    &kp DOUBLE_QUOTES  &kp LPAR      &mt RSHIFT RPAR  &mt RCTL SEMICOLON  &mt RALT COLON 
-            &kp QUESTION          &kp BACKSLASH   &kp UNDERSCORE    &kp MINUS     &kp HASH         &kp SINGLE_QUOTE   &kp LBKT      &kp RBKT         &kp CARET           &kp DOLLAR 
+//         ╭───────────────────────────────────────────────────────────────────────────────────╮   ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+            &lt DFT AT_SIGN       &lt SYM PIPE    &lt SYS PERCENT   &kp ASTERISK  &kp TILDE          &kp GRAVE              &kp LBRC      &lt SYS RBRC     &lt SYM LESS_THAN   &lt DFT GREATER_THAN 
+            &mt LALT EXCLAMATION  &mt LCTL SLASH  &mt LSHIFT EQUAL  &lt LAY PLUS  &lt NUM AMPERSAND  &lt NUM DOUBLE_QUOTES  &lt LAY LPAR  &mt RSHIFT RPAR  &mt RCTL SEMICOLON  &mt RALT COLON 
+            &kp QUESTION          &kp BACKSLASH   &kp UNDERSCORE    &kp MINUS     &kp HASH           &kp SINGLE_QUOTE       &kp LBKT      &kp RBKT         &kp CARET           &kp DOLLAR 
 
-//         ╰──────────────────────────────────────────────────────╮                            │ │                                  ╭─────────────────────────────────────────────────────────╯
-                                                                    &kp ESCAPE    &kp LGUI         &kp SPC            &kp BACKSPACE
-//                                                                ╰────────────────────────────╯ ╰──────────────────────────────────╯
+//         ╰──────────────────────────────────────────────────────╮                            │   │                                       ╭────────────────────────────────────────────────────────╯
+                                                                    &kp ESCAPE    &kp LGUI           &kp SPC                 &kp BACKSPACE
+//                                                                ╰────────────────────────────╯   ╰───────────────────────────────────────╯
             >;
 		};
 
+        num_layer {
+            label = "NUM";
+            bindings = <
+//         ╭────────────────────────────────────────────────╮ ╭────────────────────────────────────────────────────────────────╮
+            &lt DFT  &lt SYM  &lt SYS  &none    &none           &kp PAGE_UP     &kp N1         &lt SYS N2  &lt SYM N3  &lt DFT
+            &none    &none    &none    &lt LAY  &lt NUM         &lt NUM N0      &lt LAY N4     &kp N5      &kp N6      &none 
+            &none    &none    &none    &none    &none           &kp PAGE_DOWN   &kp N7         &kp N8      &kp N9      &none           
+//         ╰─────────────────────────╮                      │ │                               ╭────────────────────────────────╯
+                                       &kp ESCAPE  &kp LGUI     &kp SPC         &kp BACKSPACE
+//                                   ╰──────────────────────╯ ╰───────────────────────────────╯
+            >;
+		};
         sys_layer {
             label = "SYS";
             bindings = <
-//         ╭──────────────────────────────────────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────────────────────────╮
-            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2          &bt BT_NXT         &kp PRINTSCREEN      &kp PAGE_UP     &kp F1         &kp F2          &kp F3       &kp F10
-            &kp T         &kp C_NEXT    &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_PLAY_PAUSE     &kp T           &kp F4         &mt RSHIFT F5   &mt RALT F6  &mt RCTL F11 
-            &kp T         &kp C_PREV    &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_MUTE           &kp PAGE_DOWN   &kp F7         &kp F8          &kp F9       &kp F12           
-//         ╰────────────────────────────────────────────────╮                                     │ │                               ╭──────────────────────────────────────────╯
-                                                              &kp ESCAPE         &kp LGUI             &kp SPC         &kp BACKSPACE
-//                                                          ╰─────────────────────────────────────╯ ╰───────────────────────────────╯
+//         ╭──────────────────────────────────────────────────────────────────────────────────────╮ ╭───────────────────────────────────────────────────────╮
+            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2          &bt BT_NXT         &kp PRINTSCREEN      &kp F1      &kp F2         &kp F3  &kp F4     &kp F5
+            &bt BT_CLR    &kp C_NEXT    &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_PLAY_PAUSE     &kp LEFT    &kp DOWN       &kp UP  &kp RIGHT  &kp F11 
+            &kp F12       &kp C_PREV    &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_MUTE           &kp F6      &kp F7         &kp F8  &kp F9     &kp F10           
+//         ╰────────────────────────────────────────────────╮                                     │ │                           ╭───────────────────────────╯
+                                                              &kp ESCAPE         &kp LGUI             &kp SPC     &kp BACKSPACE
+//                                                          ╰─────────────────────────────────────╯ ╰───────────────────────────╯
+            >;
+		};
+        layout_layer {
+            label = "LAY";
+            bindings = <
+//         ╭──────────────────────────────────────────╮ ╭────────────────────────────────────────────╮
+            &none &none &none    &none       &none        &none    &none         &none  &none  &none
+            &none &none &to SYM  &to DFT     &to NUM      &to NUM  &to DFT       &SYM   &none  &none 
+            &none &none &none    &none       &none        &none    &none         &none  &none  &none           
+//         ╰───────────────────╮                      │ │                        ╭───────────────────╯
+                                 &kp ESCAPE  &kp LGUI     &kp SPC  &kp BACKSPACE
+//                             ╰──────────────────────╯ ╰────────────────────────╯
             >;
 		};
 	};
