@@ -72,13 +72,13 @@
         default_layer {
             label = "DFT";
             bindings = <
-//         ╭────────────────────────────────────────────────────────────╮ ╭────────────────────────────────────────────────────────────────╮
-            &lt DFT Q   &lt SYM W   &lt SYS E      &kp R       &kp T        &kp Y      &kp U        &lt SYS I     &lt SYM O   &lt DFT P     
-            &mt LALT A  &mt LCTL S  &mt LSHIFT D   &lt LAY F   &lt NUM G    &lt NUM H  &lt LAY J    &mt RSHIFT K  &mt RCTL L  &mt RALT ENTER
-            &kp Z       &kp X       &kp C          &kp V       &kp B        &kp N      &kp M        &kp COMMA     &kp PERIOD  &kp TAB        
-//         ╰─────────────────────────────────────╮                      │ │                        ╭───────────────────────────────────────╯
-                                                   &kp LGUI  &kp ESCAPE     &kp SPC  &kp BACKSPACE
-//                                               ╰──────────────────────╯ ╰────────────────────────╯
+//         ╭────────────────────────────────────────────────────────────╮ ╭─────────────────────────────────────────────────────────────────────╮
+            &lt DFT Q   &lt SYM W   &lt SYS E      &kp R       &kp T        &kp Y          &kp U        &lt SYS I     &lt SYM O   &lt DFT P     
+            &mt LALT A  &mt LCTL S  &mt LSHIFT D   &lt LAY F   &lt NUM G    &lt NUM H      &lt LAY J    &mt RSHIFT K  &mt LCTL L  &mt RALT ENTER
+            &kp Z       &kp X       &kp C          &kp V       &kp B        &kp N          &kp M        &kp COMMA     &kp PERIOD  &kp TAB        
+//         ╰─────────────────────────────────────╮                      │ │                            ╭────────────────────────────────────────╯
+                                                   &kp LGUI    &kp SPC      &kp BACKSPACE  &kp ESCAPE
+//                                               ╰──────────────────────╯ ╰───────────────────────────╯
             >;
 		};
 
@@ -87,11 +87,11 @@
             bindings = <
 //         ╭───────────────────────────────────────────────────────────────────────────────────╮   ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
             &lt DFT AT_SIGN       &lt SYM PIPE    &lt SYS PERCENT   &kp ASTERISK  &kp TILDE          &kp GRAVE              &kp LBRC      &lt SYS RBRC     &lt SYM LESS_THAN   &lt DFT GREATER_THAN 
-            &mt LALT EXCLAMATION  &mt LCTL SLASH  &mt LSHIFT EQUAL  &lt LAY PLUS  &lt NUM AMPERSAND  &lt NUM DOUBLE_QUOTES  &lt LAY LPAR  &mt RSHIFT RPAR  &mt RCTL SEMICOLON  &mt RALT COLON 
+            &mt LALT EXCLAMATION  &mt LCTL SLASH  &mt LSHIFT EQUAL  &lt LAY PLUS  &lt NUM AMPERSAND  &lt NUM DOUBLE_QUOTES  &lt LAY LPAR  &mt RSHIFT RPAR  &mt LCTL SEMICOLON  &mt RALT COLON 
             &kp QUESTION          &kp BACKSLASH   &kp UNDERSCORE    &kp MINUS     &kp HASH           &kp SINGLE_QUOTE       &kp LBKT      &kp RBKT         &kp CARET           &kp DOLLAR 
 
 //         ╰──────────────────────────────────────────────────────╮                            │   │                                       ╭────────────────────────────────────────────────────────╯
-                                                                    &kp LGUI    &kp ESCAPE           &kp SPC                 &kp BACKSPACE
+                                                                    &kp LGUI      &kp SPC            &kp BACKSPACE          &kp ESCAPE
 //                                                                ╰────────────────────────────╯   ╰───────────────────────────────────────╯
             >;
 		};
@@ -99,12 +99,12 @@
         num_layer {
             label = "NUM";
             bindings = <
-//         ╭────────────────────────────────────────────────╮ ╭────────────────────────────────────────────────────────────────╮
+//         ╭────────────────────────────────────────────────╮ ╭────────────────────────────────────────────────────────────────────╮
             &none    &none    &none    &none     &none           &kp PAGE_UP     &kp N1         &lt SYS N2  &lt SYM N3  &none
             &none    &none    &none    &to LAY   &none           &lt NUM N0      &lt LAY N4     &kp N5      &kp N6      &none 
-            &none    &none    &none    &none     &none           &kp PAGE_DOWN   &kp N7         &kp N8      &kp N9      &none           
-//         ╰─────────────────────────╮                      │ │                               ╭────────────────────────────────╯
-                                       &kp LGUI  &kp ESCAPE     &kp SPC         &kp BACKSPACE
+            &none    &none    &none    &none     &none           &kp PAGE_DOWN   &kp N7         &kp N8      &kp N9      &caps_word           
+//         ╰─────────────────────────╮                      │ │                               ╭────────────────────────────────────╯
+                                       &kp LGUI  &kp SPC         &kp BACKSPACE   &kp ESCAPE
 //                                   ╰──────────────────────╯ ╰───────────────────────────────╯
             >;
 		};
@@ -112,24 +112,24 @@
             label = "SYS";
             bindings = <
 //         ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮ ╭───────────────────────────────────────────────────────╮
-            &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2                 &bt BT_NXT           &kp PRINTSCREEN      &kp F1      &kp F2         &kp F3  &kp F4     &kp F5
-            &mt LALT F12  &mt LCTL C_NEXT  &mt LSHIFT C_BRIGHTNESS_INC  &lt LAY C_VOLUME_UP  &kp C_PLAY_PAUSE     &kp LEFT    &kp DOWN       &kp UP  &kp RIGHT  &kp F11 
-            &bt BT_CLR    &kp C_PREV       &kp C_BRIGHTNESS_DEC         &kp C_VOLUME_DOWN    &kp C_MUTE           &kp F6      &kp F7         &kp F8  &kp F9     &kp F10           
-//         ╰──────────────────────────────────────────────────────────╮                                       │ │                           ╭───────────────────────────╯
-                                                                        &kp LGUI           &kp ESCAPE             &kp SPC     &kp BACKSPACE
-//                                                                    ╰───────────────────────────────────────╯ ╰───────────────────────────╯
+            &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2              &bt BT_NXT          &kp PRINTSCREEN          &kp F1         &kp F2      &kp F3  &kp F4     &kp F5
+            &kp F12       &mt LCTL C_NEXT   &mt LSHIFT C_PLAY_PAUSE   &kp C_VOLUME_UP     &kp C_BRIGHTNESS_INC     &kp LEFT       &kp DOWN    &kp UP  &kp RIGHT  &kp F11 
+            &bt BT_CLR    &kp C_PREV        &kp C_MUTE                &kp C_VOLUME_DOWN   &kp C_BRIGHTNESS_DEC     &kp F6         &kp F7      &kp F8  &kp F9     &kp F10           
+//         ╰────────────────────────────────────────────────────────╮                                          │ │                           ╭───────────────────────────╯
+                                                                      &kp LGUI            &kp SPC                  &kp DELETE  &kp ESCAPE
+//                                                                  ╰──────────────────────────────────────────╯ ╰───────────────────────────╯
             >;
 		};
         layout_layer {
             label = "LAY";
             bindings = <
-//         ╭──────────────────────────────────────────╮ ╭──────────────────────────────────────────────╮
-            &none &none &none    &none       &none        &none    &none         &none    &none  &none
-            &none &none &to SYM  &to DFT     &to NUM      &to NUM  &to DFT       &to SYM  &none  &none 
-            &none &none &none    &none       &none        &none    &none         &none    &none  &none           
-//         ╰───────────────────╮                      │ │                        ╭─────────────────────╯
-                                 &kp LGUI  &kp ESCAPE     &kp SPC  &kp BACKSPACE
-//                             ╰──────────────────────╯ ╰────────────────────────╯
+//         ╭──────────────────────────────────────────╮ ╭─────────────────────────────────────────────────╮
+            &none &none &none    &none       &none        &none          &none      &none    &none  &none
+            &none &none &to SYM  &to DFT     &to NUM      &to NUM        &to DFT    &to SYM  &none  &none 
+            &none &none &none    &none       &none        &none          &none      &none    &none  &none           
+//         ╰───────────────────╮                      │ │                           ╭─────────────────────╯
+                                 &kp LGUI    &kp SPC      &kp BACKSPACE  &kp ESCAPE
+//                             ╰──────────────────────╯ ╰───────────────────────────╯
             >;
 		};
 	};
